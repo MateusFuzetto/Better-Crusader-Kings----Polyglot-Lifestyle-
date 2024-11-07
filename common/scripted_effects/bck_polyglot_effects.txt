@@ -1,0 +1,47 @@
+﻿bck_polyglot_position_effect = {
+    if = {
+        limit = {
+            AND = {
+                NOT = {
+                    has_trait = lifestyle_polyglot
+                }
+                num_of_known_languages > 0
+            }
+            is_alive = yes
+        }
+        bck_polyglot_lifestyle_set_up_effects = yes
+    }
+    else_if = {
+        limit = {
+            has_trait = lifestyle_polyglot
+            has_trait_xp = {
+                trait = lifestyle_polyglot
+                value < 100
+            }
+            is_alive = yes
+        }
+        bck_polyglot_xp_effects = yes
+    }
+}
+
+bck_polyglot_lifestyle_set_up_effects = {
+    add_trait = lifestyle_polyglot
+}
+
+bck_polyglot_xp_effects = {
+    add_trait_xp = {
+        trait = lifestyle_polyglot
+        value = {
+            integer_range = {
+                min = 10
+                max = 15
+            }
+        }
+    }
+
+    send_interface_message = {
+        type = event_generic_good_with_text
+        title = trait_improved_polyglot
+        desc = trait_improved_polyglot_desc
+    }
+}
