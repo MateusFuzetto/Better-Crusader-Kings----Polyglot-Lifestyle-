@@ -33,15 +33,9 @@ bck_polyglot_xp_effects = {
         trait = lifestyle_polyglot
         value = {
             integer_range = {
-                min = 10
-                max = 15
+                min = 15
+                max = 20
             }
         }
-    }
-
-    send_interface_message = {
-        type = event_generic_good_with_text
-        title = trait_improved_polyglot
-        desc = trait_improved_polyglot_desc
     }
 }

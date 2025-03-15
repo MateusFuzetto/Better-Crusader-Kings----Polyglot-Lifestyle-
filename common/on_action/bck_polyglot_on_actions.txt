@@ -9,4 +9,3 @@ bck_polyglot_action = {
         bck_polyglot_position_effect = yes
     }
 }
-
